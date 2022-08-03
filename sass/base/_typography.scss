@@ -1,0 +1,22 @@
+@use "../abstracts/variables" as v;
+
+body {
+  font-family: v.$font-primary;
+  font-weight: 400;
+  line-height: 1.7;
+  box-sizing: border-box;
+}
+
+.heading-primary {
+  font-family: v.$font-heading;
+  font-size: v.$heading-font-size;
+}
+
+.homepage {
+  color: v.$font-color-primary;
+}
+
+p {
+  font-size: v.$default-font-size;
+  letter-spacing: 1px;
+}

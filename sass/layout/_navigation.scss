@@ -1,0 +1,173 @@
+@use "../abstracts/variables" as v;
+
+.navigation {
+  height: 0;
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: fixed;
+    z-index: 50;
+    background-color: rgba(v.$color-grey-dark, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 6rem;
+    right: 6rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  &__icon {
+    position: absolute;
+
+    &,
+    &::after,
+    &::before {
+      width: 3rem;
+      height: 2px;
+      background-color: v.$color-paper-white;
+      transition: transform 0.2s;
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: -.8rem;
+    }
+
+    &::after {
+      top: 0.8rem;
+    }
+  }
+
+  &__button:hover &__icon,
+  &__button:hover &__icon::after,
+  &__button:hover &__icon::before {
+    // background-color: v.$color-grey-light;
+  }
+
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 40;
+    min-height: 100vh;
+    width: 0;
+    transition: all 0.3s;
+    background-image: linear-gradient(to bottom left, v.$color-paper-white, v.$color-grey-light);
+  }
+
+  &__nav {
+    // height: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s .3s;
+    // transform: translateY(-100rem);
+  }
+
+  &__image {
+    max-width: 30rem;
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+  }
+
+  &__item {
+    padding: 1rem 0;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      z-index: 45;
+      display: inline-block;
+      font-size: 3rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      color: v.$color-grey-pencil;
+      text-decoration: none;
+      transition: all 0.4s;
+      position: relative;
+
+      span {
+        display: inline-block;
+        // padding-bottom: .5rem;
+      }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: v.$color-grey-pencil;
+      transition: transform 0.2s;
+      transform: scale(0);
+    }
+
+    &:active::after,
+    &:hover::after {
+      transform: scale(1);
+    }
+  }
+
+  &__checkbox:checked + &__button {
+    transform: rotateY(180deg);
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  &__checkbox:checked ~ &__background {
+    width: 100%;
+  }
+
+  &__checkbox:checked ~ &__background &__nav {
+    min-height: 100vh;
+    display: flex;
+  }
+}

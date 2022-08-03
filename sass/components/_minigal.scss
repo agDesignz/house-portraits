@@ -1,0 +1,43 @@
+@use "../abstracts/variables" as v;
+
+.home-minigal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &__photo {
+    border-radius: 3px;
+    position: absolute;
+    box-shadow: 0 1.5rem 3rem rgba(v.$color-black, .2);
+
+    &--1 {
+      width: 25rem;
+      // align-self: center;
+      top: -30rem;
+      left: 25%;
+      z-index: 5;
+    }
+
+    &--2 {
+      width: 30rem;
+      // align-self: flex-end;
+      top: -15rem;
+      right: 0;
+      z-index: 10;
+    }
+
+    &--3 {
+      width: 35rem;
+      top: 2rem;
+      left: 0;
+      z-index: 15;
+    }
+
+    &:hover {
+      // outline: 1.5rem solid $color-primary;
+      transform: scale(1.05) translateY(-.5rem);
+      box-shadow: 0 2.5rem 4rem rgba(v.$color-black, .5);
+      z-index: 20;
+    }
+  }
+}

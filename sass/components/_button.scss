@@ -1,0 +1,24 @@
+@use "../abstracts/variables" as v;
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: 2.2rem;
+    color: v.$color-white;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid v.$color-white;
+    padding: 3px;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    background-color: v.$color-white;
+    color: v.$color-grey-pencil;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
