@@ -11,8 +11,9 @@
 @use "components/button";
 @use "components/minigal";
 
+@use "layout/dark-photo-bg";
+@use "layout/footer";
 @use "layout/header";
-@use "layout/homepage";
 @use "layout/navigation";
 
 @use "pages/home";

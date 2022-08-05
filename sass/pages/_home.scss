@@ -1,4 +1,48 @@
 @use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.homepage {
+  padding: 5rem;
+
+  @include m.respond(phone) {
+    padding: 10rem 3rem 3rem;
+  }
+
+  &__main {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10rem;
+
+    @include m.respond(tab-port) {
+      flex-direction: column;
+    }
+
+  }
+
+  &__column {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    @include m.respond(tab-port) {
+      width: 80%;
+      align-items: center;
+    }
+
+    @include m.respond(phone) {
+      width: 100%;
+    }
+
+    &--content {
+      @include m.respond(tab-port) {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+}
 
 .home-content {
   max-width: 50rem;
@@ -7,6 +51,7 @@
   flex-direction: column;
 
   &__img {
+    width: 100%;
     max-width: 60rem;
   }
 
@@ -14,17 +59,16 @@
     margin: 4rem 0;
     line-height: 1.2;
 
+    @include m.respond(tab-port) {
+      text-align: center;
+    }
+
     &--main {
       display: none;
-      // line-height: 1;
-      // margin-bottom: 1.5rem;
-      // font-size: 5rem;
-      // letter-spacing: 0.3rem;
     }
 
     &--sub {
       display: block;
-      // line-height: 1.3;
     }
   }
 

@@ -1,0 +1,47 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.footer {
+  // padding
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__copyright {
+    font-size: 1.4rem;
+  }
+
+  &__link {
+
+    &--copyright {
+      &:link,
+      &:visited {
+        display: inline-block;
+        color: v.$font-color-primary-white;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 1.5rem;
+      }
+
+      &:active,
+      &:hover {
+        color: v.$color-grey-light;
+      }
+    }
+  }
+
+  &__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: v.$font-color-primary-white;
+    margin-left: 2.5rem;
+  }
+
+  &__link--social:active &__icon,
+  &__link--social:hover &__icon {
+    fill: v.$color-grey-light;
+  }
+}

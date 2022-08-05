@@ -1,3 +1,5 @@
+@use "../abstracts/mixins" as m;
+
 *,
 *::after,
 *::before {
@@ -8,6 +10,15 @@
 
 html {
   font-size: 62.5%;
+  @include m.respond(big-desk) {
+    font-size: 75%;
+  }
+  @include m.respond(tab-land) {
+    font-size: 56.25%;
+  }
+  @include m.respond(tab-port) {
+    font-size: 50%;
+  }
 }
 
 body {
