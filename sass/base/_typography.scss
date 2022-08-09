@@ -1,15 +1,15 @@
 @use "../abstracts/variables" as v;
 
 body {
-  font-family: v.$font-primary;
-  font-weight: 400;
+  font-family: v.$font-quaternary;
+  font-weight: 300;
   line-height: 1.7;
   box-sizing: border-box;
 }
 
 .heading-primary {
-  font-family: v.$font-heading;
-  font-size: v.$heading-font-size;
+  font-family: v.$font-primary;
+  font-size: v.$primary-heading-font-size;
 }
 
 .text-white {

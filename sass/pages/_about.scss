@@ -1,0 +1,40 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.about {
+
+  &__main {
+    display: flex;
+    background-image: linear-gradient(to top right, rgba(v.$color-grey-dark, 0.85), rgba(v.$color-grey-pencil, 0.85)), url("../img/about-hero-lg.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-attachment: fixed;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 2rem 6rem rgba(v.$color-black, .3);
+
+    @include m.break(62.5em) {
+      flex-direction: column;
+    }
+
+  }
+
+  &__sidebar {
+    flex: 0 0 18%;
+    background-color: rgba(v.$color-grey-dark, .7);
+    position: relative;
+  }
+
+  &__content {
+    flex: 1;
+    padding: 2rem 5rem;
+  }
+}
+
+.about-text {
+  padding: 5rem;
+  background-color: rgba(v.$color-paper-white, .7);
+  border-radius: .5rem;
+  margin-bottom: 2rem;
+}

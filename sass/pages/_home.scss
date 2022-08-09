@@ -1,19 +1,15 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
 
-.homepage {
-  padding: 5rem;
 
-  @include m.respond(phone) {
-    padding: 10rem 3rem 3rem;
-  }
+.home {
 
   &__main {
     display: flex;
     height: 100%;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10rem;
+    margin-bottom: 8rem;
 
     @include m.respond(tab-port) {
       flex-direction: column;
@@ -43,7 +39,6 @@
     }
   }
 }
-
 .home-content {
   max-width: 50rem;
   height: 100%;
@@ -56,7 +51,9 @@
   }
 
   &__heading {
-    margin: 4rem 0;
+    font-style: italic;
+    font-weight: 400;
+    margin: 3rem 0;
     line-height: 1.2;
 
     @include m.respond(tab-port) {
@@ -73,7 +70,7 @@
   }
 
   &__text {
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
   }
 
   &__btn {

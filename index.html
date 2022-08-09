@@ -7,98 +7,95 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <!-- FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Actor&family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;300&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Sorts+Mill+Goudy:ital@0;1&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
 
   <!-- STYLESHEETS -->
   <link rel="stylesheet" href="css/style.css">
 
   <!-- SCRIPTS -->
-<script type="text/javascript" defer src="scripts/modal.js">
+  <script type="text/javascript" defer src="scripts/modal.js">
 
-</script>
+  </script>
 
   <title>Alex Geer House Portraits | Custom portraits of your house, hand-drawn in pen and ink.</title>
 </head>
 
-<body class="wheeker">
+<body>
   <div class="photo-background">
     <div class="homepage">
 
-    <div class="navigation">
-      <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
-      <label for="nav-toggle" class="navigation__button">
-        <span class="navigation__icon">&nbsp;</span>
-      </label>
-      <div class="navigation__background">
-        <nav class="navigation__nav">
-          <img src="img/girard-bl-sm.png" alt="houses on girard avenue" class="navigation__image">
-          <ul class="navigation__list">
-            <li class="navigation__item"><a href="#" class="navigation__link"><span>Home</span></a></li>
-            <li class="navigation__item"><a href="about.html" class="navigation__link"><span>About</span></a></li>
-            <li class="navigation__item"><a href="gallery.html" class="navigation__link"><span>Gallery</span></a></li>
-            <li class="navigation__item"><a href="contact.html" class="navigation__link"><span>Commission</span></a></li>
-          </ul>
-        </nav>
+      <div class="navigation navigation--corner">
+        <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
+        <label for="nav-toggle" class="navigation__button navigation__button--corner">
+          <span class="navigation__icon">&nbsp;</span>
+        </label>
+        <div class="navigation__background">
+          <nav class="navigation__nav">
+            <img src="img/girard-bl-sm.png" alt="houses on girard avenue" class="navigation__image">
+            <ul class="navigation__list">
+              <li class="navigation__item"><a href="#" class="navigation__link"><span>Home</span></a></li>
+              <li class="navigation__item"><a href="about.html" class="navigation__link"><span>About</span></a></li>
+              <li class="navigation__item"><a href="gallery.html" class="navigation__link"><span>Gallery</span></a></li>
+              <li class="navigation__item"><a href="contact.html" class="navigation__link"><span>Commission</span></a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
 
-    </div>
+      <div class="u-container">
 
-    <div class="u-container">
+        <main class="home__main">
 
-      <main class="homepage__main">
+          <div class="home__column home__column--content">
+            <img src="img/logo-white-600.png" alt="Logo" class="home-content__img">
+            <h1 class="heading-primary home-content__heading">
+              <span class="home-content__heading--main">Alex Geer Art.</span>
+              <span class="home-content__heading--sub">Custom house portraits</span>
+              <span class="home-content__heading--sub">in pen and ink.</span>
+            </h1>
+            <p class="home-content__text">
+              Your home is the place where you live, where your family grows, and where you make memories. It's a part of the family. My artwork aims to capture that ambience and provide you with a warm, personal portrait of your home that you can
+              cherish throughout the years.
+            </p>
+            <a href="mailto:alex@alexgeerart.com" class="btn-text home-content__btn">Get a quote</a>
+          </div>
 
-        <div class="homepage__column homepage__column--content">
-          <img src="img/logo-white-600.png" alt="Logo" class="home-content__img">
-          <h1 class="heading-primary home-content__heading">
-            <span class="home-content__heading--main">Alex Geer Art.</span>
-            <span class="home-content__heading--sub">Custom house portraits</span>
-            <span class="home-content__heading--sub">in pen and ink.</span>
-          </h1>
-          <p class="home-content__text">
-            Your home is the place where you live, where your family grows, and where you make memories. It's a part of the family. My artwork aims to capture that ambience and provide you with a warm, personal portrait of your home that you can
-            cherish throughout the years.
-          </p>
-          <a href="mailto:alex@alexgeerart.com" class="btn-text home-content__btn">Get a quote</a>
-        </div>
+          <div class="home__column home__column--minigal">
+            <div class="home-minigal">
 
-        <div class="homepage__column homepage__column--minigal">
-          <div class="home-minigal">
+              <!-- USE srcset HERE for more photo options -->
 
-            <!-- USE srcset HERE for more photo options -->
+              <img src="img/print-dimitra.jpg" alt="Portrait of a New Hampshire cottage" class="home-minigal__photo home-minigal__photo--1">
+              <img src="img/print-mys.jpg" alt="Portrait of a stucco house" class="home-minigal__photo home-minigal__photo--2">
+              <img src="img/print-jen.jpg" alt="Portrai of a modern house" class="home-minigal__photo home-minigal__photo--3">
+            </div>
+          </div>
 
-            <img src="img/print-jen.jpg" alt="Portrait of a New Hampshire cottage" class="home-minigal__photo home-minigal__photo--1">
-            <img src="img/print-dimitra.jpg" alt="Portrait of a stucco house" class="home-minigal__photo home-minigal__photo--2">
-            <img src="img/print-mys.jpg" alt="Portrai of a modern house" class="home-minigal__photo home-minigal__photo--3">
+        </main>
+
+      </div>
+
+      <footer class="footer">
+        <div class="u-container">
+          <div class="footer__content">
+            <p class="footer__copyright">&copy; Alex Geer art, 2022. Built by <a href="#" class="footer__link--copyright">agDesignz</a></p>
+            <a href="#" class="footer__link--social">
+              <svg class="footer__icon">
+                <use href="img/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+            <a href="#" class="footer__link--social">
+              <svg class="footer__icon">
+                <use href="img/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
           </div>
         </div>
+      </footer>
 
-      </main>
-
+      <!-- end of .homepage -->
     </div>
-
-  <footer class="footer">
-    <div class="u-container">
-      <div class="footer__content">
-        <p class="footer__copyright">&copy; Alex Geer art, 2022. Built by <a href="#" class="footer__link--copyright">agDesignz</a></p>
-        <a href="#" class="footer__link--social">
-          <svg class="footer__icon">
-            <use href="img/sprite.svg#icon-facebook"></use>
-          </svg>
-        </a>
-        <a href="#" class="footer__link--social">
-          <svg class="footer__icon">
-            <use href="img/sprite.svg#icon-instagram"></use>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </footer>
-
-<!-- end of .homepage -->
-</div>
-<!-- END OF BG DIV -->
+    <!-- END OF BG DIV -->
   </div>
 
 </body>
