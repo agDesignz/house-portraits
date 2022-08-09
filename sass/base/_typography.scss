@@ -12,11 +12,17 @@ body {
   font-size: v.$primary-heading-font-size;
 }
 
-.text-white {
-  // color: v.$font-color-primary-white;
+.heading-secondary {
+  font-size: 3rem;
+  font-family: v.$font-secondary;
 }
 
 p {
   font-size: v.$default-font-size;
   letter-spacing: 1px;
+}
+
+figcaption {
+  font-size: 1.2rem;
+  text-align: center;
 }

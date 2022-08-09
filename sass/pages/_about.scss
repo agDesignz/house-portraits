@@ -37,4 +37,19 @@
   background-color: rgba(v.$color-paper-white, .7);
   border-radius: .5rem;
   margin-bottom: 2rem;
+
+  &__photo {
+    width: 30rem;
+    padding: 1rem;
+
+    &--martel {
+      
+    }
+  }
+
+  &__img {
+    margin-bottom: .5rem;
+    border-radius: 3px;
+    box-shadow: rgba(v.$color-black, 0.2) 0 .8rem 2.4rem;;
+  }
 }

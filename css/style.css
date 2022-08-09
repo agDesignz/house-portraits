@@ -41,9 +41,19 @@ body {
   font-size: 5rem;
 }
 
+.heading-secondary {
+  font-size: 3rem;
+  font-family: "Sorts Mill Goudy", serif;
+}
+
 p {
   font-size: 2rem;
   letter-spacing: 1px;
+}
+
+figcaption {
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 .u-container {
@@ -511,6 +521,15 @@ body.modal-open {
   background-color: rgba(253, 252, 249, 0.7);
   border-radius: 0.5rem;
   margin-bottom: 2rem;
+}
+.about-text__photo {
+  width: 30rem;
+  padding: 1rem;
+}
+.about-text__img {
+  margin-bottom: 0.5rem;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0.8rem 2.4rem;
 }
 
 .gal-content {
