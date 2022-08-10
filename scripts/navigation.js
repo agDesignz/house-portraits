@@ -16,4 +16,11 @@
     }
   }
   checkBox.addEventListener("change", checkIt);
+
+  window.onunload = function() {
+    const navToggle = document.querySelector('.navigation__checkbox');
+    navToggle.checked = false;
+  }
+
+
 }());
