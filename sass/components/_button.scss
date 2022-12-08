@@ -7,14 +7,18 @@
     color: v.$color-white;
     display: inline-block;
     text-decoration: none;
-    border-bottom: 1px solid v.$color-white;
-    padding: 3px;
+    // border-bottom: 1px solid v.$color-white;
+    border: 1px solid v.$color-white;
+    padding: 3px 2rem;
+    border-radius: 4px;
     transition: all 0.2s;
+    // justify-self: start;
+    // align-self: end;
   }
 
   &:hover {
-    background-color: v.$color-white;
-    color: v.$color-grey-pencil;
+    background-color: rgba(v.$color-white-paper, .2);
+    // color: v.$color-grey-dark;
     transform: translateY(-2px);
   }
 

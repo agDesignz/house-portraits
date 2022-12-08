@@ -1,3 +1,6 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
 .u-container {
   max-width: 120rem;
   margin: 0 auto;

@@ -25,5 +25,5 @@
 //  COLORS and GRADIENTS
 
 @mixin paperPage {
-  background-image: linear-gradient(to bottom left, v.$color-paper-white, v.$color-paper-grey);
+  background-image: linear-gradient(to bottom left, v.$color-white-paper, v.$color-grey-paper);
 }

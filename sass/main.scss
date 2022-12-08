@@ -9,13 +9,13 @@
 @use "base/utilities";
 
 @use "components/button";
+@use "components/lightbox";
 @use "components/minigal";
-@use "components/side-nav";
 
+@use "layout/containers";
 @use "layout/footer";
 @use "layout/header";
 @use "layout/navigation";
-@use "layout/paper-page";
 @use "layout/photo-bg";
 
 @use "pages/about";

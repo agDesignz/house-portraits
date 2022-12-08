@@ -1,151 +1,38 @@
-@use "../abstracts/variables" as v;
-@use "../abstracts/mixins" as m;
+@use "../abstracts/variables"as v;
+@use "../abstracts/mixins"as m;
 
 .about {
 
-  &__main {
-    display: flex;
-    background-image: linear-gradient(to top right, rgba(v.$color-grey-dark, 0.85), rgba(v.$color-grey-pencil, 0.85)), url("../img/about-hero-lg.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-attachment: fixed;
-    border-radius: 3px;
-    overflow: hidden;
-    box-shadow: 0 2rem 6rem rgba(v.$color-black, .3);
-
-    @include m.break(62.5em) {
-      flex-direction: column;
-    }
-
-    @include m.break(50em) {
-      background-image: none;
-      background-color: v.$color-grey-light;
-    }
-
-  }
-
-  &__sidebar {
-    flex: 0 0 18%;
-    background-color: rgba(v.$color-grey-dark, .7);
-    position: relative;
+  &__container {
+    display: grid;
+    grid-template-rows: min-content;
+    grid-row-gap: 4vw;
   }
 
   &__content {
-    flex: 1;
-    padding: 2rem 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10vw;
+    grid-row-gap: 2vw;
 
-    @include m.respond(phone) {
-      padding: 2.5rem 1rem;
+    @include m.respond(tab-port) {
+      grid-template-columns: 1fr;
     }
-  }
-}
-
-.about-text {
-  padding: 5rem;
-  padding-bottom: 7.5rem;
-  background-color: rgba(v.$color-paper-white, .7);
-  border-radius: .5rem;
-  margin-bottom: 2rem;
-  position: relative;
-
-  @include m.respond(phone) {
-    padding: 2.5rem;
-    padding-bottom: 7.5rem;
   }
 
   &__title {
-    margin-bottom: 2rem;
-
-    @include m.break(50em) {
-      text-align: center;
-    }
-
-    &--right {
-      text-align: right;
-    }
-  }
-
-  &__container-row {
-    display: flex;
-
-    @include m.break(50em) {
-      flex-direction: column;
-      align-items: center;
-    }
+    grid-column: 1 / -1;
   }
 
   &__text {
-
-  }
-
-  &__photo-box {
-    display: flex;
-    flex-direction: column;
-
-
-  &--right {
-    flex: 0 0 30rem;
-    margin-left: 2rem;
-
-    @include m.break(50em) {
-      margin-left: 0;
-      margin-top: 4.5rem;
-    }
-  }
-
-  &--half {
-    flex: 0 0 50%;
-    padding: 0;
-    margin-right: 2.5rem;
-
-    @include m.break(50em) {
-      margin-right: 0;
-    }
-  }
-
-  }
-
-  &__photo {
-
-    @include m.break(50em) {
-      width: auto;
-      padding: 0;
-    }
-
-    &:first-child {
-      margin-bottom: 2rem;
-    }
-
-  }
-
-  &__photo--wide {
-    margin-top: 5rem;
-
-    @include m.break(50em) {
-      margin-top: 2rem;
-    }
+    grid-column: 1 / -1;
   }
 
   &__img {
-    margin-bottom: 1rem;
     width: 100%;
-    border-radius: 3px;
-    box-shadow: rgba(v.$color-black, 0.2) 0 .8rem 2.4rem;;
+    object-fit: cover;
+    display: block;
+    margin: 1rem 0;
   }
 
-  &__return-top {
-    width: 4rem;
-    height: 4rem;
-    fill: v.$color-grey-dark;
-    margin-left: 2.5rem;
-    cursor: pointer;
-    position: absolute;
-    bottom: 2rem;
-    right: 2rem;
-
-    &:hover {
-      fill: v.$color-grey-pencil;
-    }
-  }
 }

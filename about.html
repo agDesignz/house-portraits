@@ -23,159 +23,74 @@
   <title>Alex Geer House Portraits | Custom portraits of your house, hand-drawn in pen and ink.</title>
 </head>
 
-<body>
+<body class="photo-background">
 
-  <div class="paper-background">
-    <div class="u-container">
+  <div class="page-container">
+    
+    <header class="header">
+      <img src="img/logo-tile-sq.png" alt="" class="header__logo">
+      <ul class="navigation__list">
+          <li class="navigation__item"><a href="index.html" class="navigation__link">Home</a></li>
+          <li class="navigation__item"><a href="about.html" class="navigation__link">About</a></li>
+          <li class="navigation__item"><a href="gallery.html" class="navigation__link">Gallery</a></li>
+          <li class="navigation__item"><a href="contact.html" class="navigation__link">Commission</a></li>
+        </ul>
 
-      <header class="header">
-
-        <div class="header__box">
-          <div class="header__content">
-            <img src="img/logo-pencil-sm.png" alt="Small logo" class="header__logo">
-            <h1 class="heading-primary header__label">About</h1>
-          </div>
-          <div class="header__navbox">
-            <div class="navigation">
-              <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
-              <label for="nav-toggle" class="navigation__button navigation__button--header">
-                <span class="navigation__icon">&nbsp;</span>
-              </label>
-              <div class="navigation__background">
-                <nav class="navigation__nav">
-                  <img src="img/girard-bl-sm.png" alt="houses on girard avenue" class="navigation__image">
-                  <ul class="navigation__list">
-                    <li class="navigation__item"><a href="index.html" class="navigation__link">Home</a></li>
-                    <li class="navigation__item"><a href="about.html" class="navigation__link">About</a></li>
-                    <li class="navigation__item"><a href="gallery.html" class="navigation__link">Gallery</a></li>
-                    <li class="navigation__item"><a href="contact.html" class="navigation__link">Commission</a></li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-
+        <div class="navigation navigation--corner">
+          <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
+          <label for="nav-toggle" class="navigation__button navigation__button--corner">
+            <span class="navigation__icon">&nbsp;</span>
+          </label>
+          <div class="navigation__background">
+            <nav class="navigation__nav">
+              <img src="img/girard-bl-sm.png" alt="houses on girard avenue" class="navigation__image">
+              <ul class="navigation__list--modal">
+                <li class="navigation__item"><a href="index.html" class="navigation__link navigation__link--modal">Home</a></li>
+                <li class="navigation__item"><a href="about.html" class="navigation__link navigation__link--modal">About</a></li>
+                <li class="navigation__item"><a href="gallery.html" class="navigation__link navigation__link--modal">Gallery</a></li>
+                <li class="navigation__item"><a href="contact.html" class="navigation__link navigation__link--modal">Commission</a></li>
+              </ul>
+            </nav>
           </div>
         </div>
-      </header>
+  </header>
 
-      <main class="about__main">
+    <section class="main-container about__container">
 
+      <div class="about__content" id="my-portraits">
+        <h2 class="heading-secondary about__title">My Portraits</h2>
+        <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+          officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        <nav class="about__sidebar">
-          <ul class="side-nav">
+        <figure class="about__item">
+          <img src="img/print-alison.jpg" alt="Drawing of a house in Massachusetts" class="about__img">
+          <figcaption>Massachusetts</figcaption>
+        </figure>
 
-            <li class="side-nav__item">
-              <a href="#my-portraits" class="side-nav__link">
-                My Portraits
-              </a>
-            </li>
+        <figure class="about__item">
+          <img src="img/print-sweden.jpg" alt="Drawing of a Minneapolis Diner" class="about__img">
+          <figcaption>A commission in Sweden.</figcaption>
+        </figure>
 
-            <li class="side-nav__item">
-              <a href="#my-art" class="side-nav__link">
-                My Art
-              </a>
-            </li>
+        <h2 class="heading-secondary about__title">About Me</h2>
+        <p class="about__text">Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Viverra accumsan in
+          nisl nisi scelerisque eu ultrices. Pulvinar elementum integer enim neque volutpat ac tincidunt. Duis convallis
+          convallis tellus id interdum. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus et.
+          Sit amet venenatis urna cursus eget nunc scelerisque viverra. Faucibus pulvinar elementum integer enim neque
+          volutpat. Quis commodo odio aenean sed adipiscing diam donec adipiscing tristique. Rhoncus dolor purus non
+          enim. Justo laoreet sit amet cursus sit amet. Ipsum suspendisse ultrices gravida dictum fusce. Mauris cursus
+          mattis molestie a iaculis at erat.</p>
 
-            <li class="side-nav__item">
-              <a href="#my-path" class="side-nav__link">
-                My Path
-              </a>
-            </li>
+      </div>
 
-            <li class="side-nav__item">
-              <a href="#about-me" class="side-nav__link">
-                About Me
-              </a>
-            </li>
-
-          </ul>
-        </nav>
-
-        <div class="about__content">
-
-          <div class="about-text" id="my-portraits">
-            <h2 class="heading-secondary about-text__title">My Portraits</h2>
-            <div class="about-text__container-row">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor
-                sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <div class="about-text__photo-box about-text__photo-box--right">
-                <figure class="about-text__photo about-text__photo--martel">
-                  <img src="img/about-martel-300.jpg" alt="Drawing of a house in Massachusetts" class="about-text__img">
-                  <figcaption>A commision in Massachusetts</figcaption>
-                </figure>
-                <figure class="about-text__photo about-text__photo--egg">
-                  <img src="img/about-egg-300.jpg" alt="Drawing of a Minneapolis Diner" class="about-text__img">
-                  <figcaption>Minneapolis. Drawing bricks.</figcaption>
-                </figure>
-              </div>
-            </div>
-            <svg class="about-text__return-top to-top">
-              <use href="img/sprite.svg#icon-chevron-with-circle-up"></use>
-            </svg>
-          </div>
-
-          <div class="about-text" id="my-art">
-            <h2 class="heading-secondary about-text__title">My Art</h2>
-            <div class="about-text__container-col">
-              <p>Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Viverra accumsan in nisl nisi scelerisque eu ultrices. Pulvinar elementum integer enim neque volutpat ac tincidunt. Duis convallis convallis tellus id interdum.
-                Consectetur adipiscing elit pellentesque habitant morbi tristique senectus et. Sit amet venenatis urna cursus eget nunc scelerisque viverra. Faucibus pulvinar elementum integer enim neque volutpat. Quis commodo odio aenean sed
-                adipiscing diam donec adipiscing tristique. Rhoncus dolor purus non enim. Justo laoreet sit amet cursus sit amet. Ipsum suspendisse ultrices gravida dictum fusce. Mauris cursus mattis molestie a iaculis at erat.</p>
-              <figure class="about-text__photo--wide">
-                <img src="img/murphy-farm-900.jpg" alt="Old Murphy Farm in Belle Plaine" class="about-text__img">
-                <figcaption>Belle Plaine, MN.</figcaption>
-              </figure>
-            </div>
-            <svg class="about-text__return-top to-top">
-              <use href="img/sprite.svg#icon-chevron-with-circle-up"></use>
-            </svg>
-          </div>
-
-          <div class="about-text" id="my-path">
-            <h2 class="heading-secondary about-text__title about-text__title--right">My Path</h2>
-            <div class="about-text__container-row">
-              <div class="about-text__photo-box about-text__photo-box--half">
-                <figure class="about-text__photo">
-                  <img src="img/havel-600.jpg" alt="Office of Czech President Havel" class="about-text__img">
-                  <figcaption>Office of Czech President Havel</figcaption>
-                </figure>
-              </div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-            <svg class="about-text__return-top to-top">
-              <use href="img/sprite.svg#icon-chevron-with-circle-up"></use>
-            </svg>
-          </div>
-
-          <div class="about-text" id="about-me">
-            <h2 class="heading-secondary about-text__title">About Me</h2>
-            <div class="about-text__container-row">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor
-                sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <div class="about-text__photo-box about-text__photo-box--right">
-                <figure class="about-text__photo about-text__photo--martel">
-                  <img src="img/alex-r2d2-600.jpg" alt="Me in Prague" class="about-text__img">
-                  <figcaption>That's a ventilation shaft from a Cold-War-era bunker in Prague. Some street artists decorated it in 2018.</figcaption>
-                </figure>
-                <figure class="about-text__photo about-text__photo--egg">
-                  <img src="img/alex-lit-600.jpg" alt="Me in Saint Paul" class="about-text__img">
-                  <figcaption>Perusing the literary selection on Lincoln Ave, St Paul</figcaption>
-                </figure>
-              </div>
-            </div>
-            <svg class="about-text__return-top to-top">
-              <use href="img/sprite.svg#icon-chevron-with-circle-up"></use>
-            </svg>
-          </div>
-
-        </div>
-
-      </main>
-
-    </div>
+    </section>
   </div>
 
 </body>

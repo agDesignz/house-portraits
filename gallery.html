@@ -17,73 +17,129 @@
   <link rel="stylesheet" href="css/style.css">
 
   <!-- SCRIPTS -->
-  <script type="text/javascript" defer src="scripts/navigation.js">
-
-  </script>
+  <script type="text/javascript" defer src="scripts/navigation.js"></script>
+  <script type="text/javascript" defer src="scripts/gallery.js"></script>
 
   <title>Alex Geer House Portraits | Custom portraits of your house, hand-drawn in pen and ink.</title>
 </head>
 
-<body>
+<body class="photo-background">
 
-  <div class="paper-background">
-    <div class="default-page">
-      <header class="header">
-        <div class="u-container">
-          <div class="header__box">
-            <div class="header__content">
-              <img src="img/logo-pencil-sm.png" alt="Small logo" class="header__logo">
-              <h1 class="heading-primary header__label">Gallery</h1>
-            </div>
+  <div class="page-container">
 
+    <header class="header">
+      <img src="img/logo-tile-sq.png" alt="" class="header__logo">
+      <ul class="navigation__list">
+          <li class="navigation__item"><a href="index.html" class="navigation__link">Home</a></li>
+          <li class="navigation__item"><a href="about.html" class="navigation__link">About</a></li>
+          <li class="navigation__item"><a href="gallery.html" class="navigation__link">Gallery</a></li>
+          <li class="navigation__item"><a href="contact.html" class="navigation__link">Commission</a></li>
+        </ul>
 
-            <div class="header__navbox">
-
-              <div class="navigation">
-                <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
-                <label for="nav-toggle" class="navigation__button navigation__button--header">
-                  <span class="navigation__icon">&nbsp;</span>
-                </label>
-                <div class="navigation__background">
-                  <nav class="navigation__nav">
-                    <img src="img/girard-bl-sm.png" alt="houses on girard avenue" class="navigation__image">
-                    <ul class="navigation__list">
-                      <li class="navigation__item"><a href="index.html" class="navigation__link">Home</a></li>
-                      <li class="navigation__item"><a href="about.html" class="navigation__link">About</a></li>
-                      <li class="navigation__item"><a href="gallery.html" class="navigation__link">Gallery</a></li>
-                      <li class="navigation__item"><a href="contact.html" class="navigation__link">Commission</a></li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-
-            </div>
+        <div class="navigation navigation--corner">
+          <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
+          <label for="nav-toggle" class="navigation__button navigation__button--corner">
+            <span class="navigation__icon">&nbsp;</span>
+          </label>
+          <div class="navigation__background">
+            <nav class="navigation__nav">
+              <img src="img/girard-bl-sm.png" alt="houses on girard avenue" class="navigation__image">
+              <ul class="navigation__list--modal">
+                <li class="navigation__item"><a href="index.html" class="navigation__link navigation__link--modal">Home</a></li>
+                <li class="navigation__item"><a href="about.html" class="navigation__link navigation__link--modal">About</a></li>
+                <li class="navigation__item"><a href="gallery.html" class="navigation__link navigation__link--modal">Gallery</a></li>
+                <li class="navigation__item"><a href="contact.html" class="navigation__link navigation__link--modal">Commission</a></li>
+              </ul>
+            </nav>
           </div>
         </div>
-      </header>
+  </header>
 
-      <!-- <main class="gallery-main">
-        <section class="gal-content">
-          <div class="gal-content__text gal-content__main">
-            <p class="gal-content__description">
+  <section class="main-container gallery__content">
+    <div class="gallery__note">
+      <p class="gallery__note--body">
+        I have a dear friend, Michael, for whom I wanted to get a special gift so I immediately thought of Alex Geer and his beautiful house portraits. Alex's pen and ink drawing of the home was beautifully rendered, but just as importantly, it was warm and personal.
+      </p>
+      <p class="gallery__note--signature">--Diane, Massachusetts</p>
+    </div>
+    <div class="gallery__info">
+      <p>
+        Each portrait is drawn on archival quality paper, with archival ink. Both paper and ink are acid-free. They also look great on stationary, coffee mugs, mouse pads or even a face masks.
+      </p>
 
-              Each portrait is drawn on archival quality paper, with archival ink. Both paper and ink are acid-free. They also look great on stationary, coffee mugs, mouse pads or even a face masks.
+      <p>
+        Whether framed and hanging on the wall, or printed on an accessory, a house portrait makes a great gift for holidays, weddings, or any occasion. And don't forget house-warming gifts.
+      </p>
+    </div>
+  </section>
 
-              Whether framed and hanging on the wall, or printed on an accessory, a house portrait makes a great gift for holidays, weddings, or any occasion. And don't forget house-warming gifts.
-            </p>
-          </div>
-          <div class="gal-content__text gal-content__testimonial">
-            <p class="gal-content__quote">“ I have a dear friend, Michael, for whom I wanted to get a special gift so I immediately thought of Alex Geer and his beautiful house portraits.
-              Alex's pen and ink drawing of the home was beautifully rendered, but just as importantly, it was warm and personal."</p>
-            <p class="gal-content__quote">– – Diane P, Massachusetts</p>
-          </div>
-        </section>
+  <section class="full-container">
 
-      </main> -->
+    <div class="gallery__container">
+
+      <figure class="gallery__item gallery__item--1">
+        <img src="img/gal-abbot.jpg" alt="Gallery image 1" class="gallery__img">
+      </figure>
+
+      <figure class="gallery__item gallery__item--2">
+        <img src="img/gal-alison.jpg" alt="Gallery image 2" class="gallery__img">
+      </figure>
+
+      <figure class="gallery__item gallery__item--3">
+        <img src="img/gal-dimitra.jpg" alt="Gallery image 3" class="gallery__img">
+      </figure>
+
+      <figure class="gallery__item gallery__item--4">
+        <img src="img/gal-egg.jpg" alt="Gallery image 4" class="gallery__img">
+      </figure>
+
+      <figure class="gallery__item gallery__item--5">
+        <img src="img/gal-girard.jpg" alt="Gallery image 5" class="gallery__img">
+      </figure>
+
+      <figure class="gallery__item gallery__item--6">
+        <img src="img/gal-jen.jpg" alt="Gallery image 6" class="gallery__img">
+      </figure>
+
+      <figure class="gallery__item gallery__item--7">
+        <img src="img/gal-john.jpg" alt="Gallery image 7" class="gallery__img">
+      </figure>
+
+      <figure class="gallery__item gallery__item--8">
+        <img src="img/gal-letitbe.jpg" alt="Gallery image 8" class="gallery__img">
+      </figure>
+
+      <figure class="gallery__item gallery__item--9">
+        <img src="img/gal-murph.jpg" alt="Gallery image 9" class="gallery__img">
+      </figure>
+
+      <figure class="gallery__item gallery__item--10">
+        <img src="img/gal-mys.jpg" alt="Gallery image 10" class="gallery__img">
+      </figure>
+
+      <figure class="gallery__item gallery__item--11">
+        <img src="img/gal-purelm.jpg" alt="Gallery image 11" class="gallery__img">
+      </figure>
+
+      <figure class="gallery__item gallery__item--12">
+        <img src="img/gal-sweden.jpg" alt="Gallery image 12" class="gallery__img">
+      </figure>
+
+      <figure class="gallery__item gallery__item--13">
+        <img src="img/gal-ueland.jpg" alt="Gallery image 13" class="gallery__img">
+      </figure>
+
+      <figure class="gallery__item gallery__item--14">
+        <img src="img/havel-600.jpg" alt="Gallery image 14" class="gallery__img">
+      </figure>
+
+      <!-- <figure class="gallery__item gallery__item--15">
+        <img src="img/logo-white-600.png" alt="Gallery image 15" class="gallery__img">
+      </figure> -->
 
     </div>
-  </div>
-
+  </section>
+</div>
 </body>
 
 </html>

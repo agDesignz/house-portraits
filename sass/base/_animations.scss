@@ -1,0 +1,20 @@
+@keyframes imageUp {
+    0% {
+        transform: translateY(20%) scale(50%);
+    }
+
+    100% {
+        transform: translateY(0) scale(100%);
+    }
+}
+
+@keyframes imageDown {
+    
+    0% {
+        transform: translateY(0) scale(100%);
+    }
+
+    100% {
+        transform: translateY(20%) scale(50%);
+    }
+}
