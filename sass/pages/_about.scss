@@ -12,20 +12,30 @@
   &__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content;
     grid-column-gap: 10vw;
     grid-row-gap: 2vw;
+    align-items: end;
 
     @include m.respond(tab-port) {
       grid-template-columns: 1fr;
     }
   }
 
+  &__gal {
+    // grid-column: -2 / -1;
+    // grid-row: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 2rem;
+    column-gap: 2rem;
+  }
+
   &__title {
-    grid-column: 1 / -1;
   }
 
   &__text {
-    grid-column: 1 / -1;
   }
 
   &__img {

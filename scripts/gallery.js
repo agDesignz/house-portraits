@@ -7,8 +7,7 @@
 
     [...document.querySelectorAll('.gallery__img')].forEach(img => {
         img.addEventListener('click', (e) => {
-            document.body.style.position = 'fixed';
-            document.body.style.top = `-${window.scrollY}px`;
+            document.body.style.overflow = 'hidden';
             console.log(e.target.src);
             lightbox.classList.add('active');
             const lightImg = document.createElement('img');
@@ -30,8 +29,7 @@
         setTimeout(() => {
             lightImg.style.display = 'none';
             lightbox.classList.remove('active');
-            document.body.style.position = '';
-            document.body.style.top = '';
+            document.body.style.overflow = 'auto';
         }, 100); 
     });
 
