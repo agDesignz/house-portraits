@@ -19,8 +19,12 @@ html {
   @include m.respond(tab-port) {
     font-size: 50%;
   }
+
+  height: 100%;
 }
 
 body {
   box-sizing: border-box;
+
+  height: 100%;
 }

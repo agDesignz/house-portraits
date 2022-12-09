@@ -2,46 +2,58 @@
 @use "../abstracts/mixins" as m;
 
 .footer {
-  // padding
+  padding: 1vw 0;
+  border-top: 1px solid v.$color-grey-light;
+  border-bottom: 1px solid v.$color-grey-light;
+  grid-column: center-start / center-end;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-  &__content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  @include m.respond(phone) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 3.5rem;
+  }
+
+  &__cta {
+    & > * {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__email {
+    &:link,
+    &:visited {
+      display: inline-block;
+      color: v.$font-color-primary-white;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+
+    &:active,
+    &:hover {
+      color: v.$color-grey-light;
+    }
+  }
+
+
+  &__stamp {
+    justify-self: end;
+
+    @include m.respond(phone) {
+      justify-self: center;
+    }
+  }
+
+  &__logo {
+    height: 8rem;
   }
 
   &__copyright {
     font-size: 1.4rem;
+    align-self: end;
+    margin-top: 1.5rem;
   }
 
-  &__link {
-
-    &--copyright {
-      &:link,
-      &:visited {
-        display: inline-block;
-        color: v.$font-color-primary-white;
-        font-weight: 700;
-        text-decoration: none;
-        font-size: 1.5rem;
-      }
-
-      &:active,
-      &:hover {
-        color: v.$color-grey-light;
-      }
-    }
-  }
-
-  &__icon {
-    width: 2.5rem;
-    height: 2.5rem;
-    fill: v.$font-color-primary-white;
-    margin-left: 2.5rem;
-  }
-
-  &__link--social:active &__icon,
-  &__link--social:hover &__icon {
-    fill: v.$color-grey-light;
-  }
 }

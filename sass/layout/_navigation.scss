@@ -94,7 +94,7 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
     z-index: 50;
-    background-color: rgba(v.$color-grey-dark, .95);
+    background-color: rgba(v.$color-grey-paper, .95);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,7 +131,7 @@
     &::before {
       width: 3rem;
       height: 2px;
-      background-color: v.$color-white-paper;
+      background-color: v.$color-grey-dark;
       transition: transform 0.2s;
     }
 

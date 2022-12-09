@@ -1,0 +1,24 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.contact {
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr [contact-start] minmax(min-content, 50%) [contact-end] 1fr;
+        row-gap: 2vw;
+
+        & > * {
+            grid-column: contact-start / contact-end;
+        }
+    }
+
+    &__text {
+
+    }
+
+    &__btn {
+        justify-self: center;
+        margin-top: 6rem;
+    }
+}
