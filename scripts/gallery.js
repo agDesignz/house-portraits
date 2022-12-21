@@ -24,13 +24,14 @@
 
     const lightsOut = () => {
         const lightImg = document.querySelector('.lightbox__img');
-        lightboxContainer.classList.add('out');      
+        lightboxContainer.classList.add('out');     
+        lightboxContainer.classList.remove('lightbox__img');     
         setTimeout(() => {
             lightImg.style.display = 'none';
             lightbox.classList.add('lightbox--hidden');
             document.body.style.overflow = 'auto';
             lightboxContainer.removeChild(lightImg);
-        }, 100); 
+        }, 300); 
     };
 
     galContainer.addEventListener('click', lightShow);

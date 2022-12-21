@@ -116,13 +116,9 @@ figcaption {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 56.25em) {
-  .lightbox__container {
-    max-width: 90%;
-  }
-}
 .lightbox__container.out {
-  animation: imageDown 0.2s ease-in-out;
+  transition: all 0.35s;
+  transform: translateY(20%) scale(0%);
 }
 .lightbox--hidden {
   display: none;
@@ -131,10 +127,12 @@ figcaption {
   grid-column: 1/2;
   grid-row: 1/2;
   max-width: 82rem;
-  animation: imageUp 0.1s ease-in-out;
+  animation: imageUp 0.3s ease-in-out;
 }
-.lightbox__img.out {
-  animation: imageDown 0.2s ease-in-out;
+@media (max-width: 56.25em) {
+  .lightbox__img {
+    max-width: 90%;
+  }
 }
 .lightbox__close {
   grid-column: 1/2;
@@ -525,11 +523,14 @@ body.modal-open {
 
 .contact__container {
   display: grid;
-  grid-template-columns: 1fr [contact-start] minmax(min-content, 50%) [contact-end] 1fr;
   row-gap: 2vw;
 }
 .contact__container > * {
   grid-column: contact-start/contact-end;
+}
+.contact__text {
+  max-width: 80rem;
+  justify-self: center;
 }
 .contact__btn {
   justify-self: center;

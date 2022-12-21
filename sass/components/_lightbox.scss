@@ -19,12 +19,14 @@
         justify-content: center;
         align-items: center;
 
-        @include m.respond(tab-port) {
-            max-width: 90%;
-          }
+        // @include m.respond(tab-port) {
+        //     max-width: 90%;
+        //   }
 
         &.out {
-            animation: imageDown .2s ease-in-out;
+            // animation: imageDown .2s ease-in-out;
+                        transition: all .35s;
+            transform: translateY(20%) scale(0%);
         }
     }
 
@@ -37,15 +39,10 @@
             grid-column: 1 / 2;
             grid-row: 1 / 2;
             max-width: 82rem;
-            animation: imageUp .1s ease-in-out;
-
-        // @include m.respond(tab-port) {
-        //     max-width: 90%;
-        //   }
-
-        &.out {
-            animation: imageDown .2s ease-in-out;
-        }
+            @include m.respond(tab-port) {
+                max-width: 90%;
+              }
+            animation: imageUp .3s ease-in-out;
     }
 
     &__close {
