@@ -4,7 +4,7 @@
 .minigal {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(11, 3vw);
+  // grid-template-rows: repeat(11, 3vw);
   grid-row-gap: 1rem;
   grid-column-gap: 1rem;
   align-content: center;

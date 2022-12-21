@@ -3,24 +3,21 @@
 
 .lightbox {
     position: fixed;
-    z-index: 100;
+    z-index: 20;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(v.$color-grey-dark, .95);
-    display: none;
+    display: grid;
+    justify-content: center;
+    align-items: center;
 
     overflow-y: auto;
 
-    &.active {
-        display: flex;
+    &__container {
+        display: grid;
         justify-content: center;
         align-items: center;
-    }
-
-    &__img {
-            max-width: 82rem;
-            animation: imageUp .1s ease-in-out;
 
         @include m.respond(tab-port) {
             max-width: 90%;
@@ -28,6 +25,47 @@
 
         &.out {
             animation: imageDown .2s ease-in-out;
+        }
+    }
+
+    &--hidden {
+        display: none;
+
+    }
+
+    &__img {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            max-width: 82rem;
+            animation: imageUp .1s ease-in-out;
+
+        // @include m.respond(tab-port) {
+        //     max-width: 90%;
+        //   }
+
+        &.out {
+            animation: imageDown .2s ease-in-out;
+        }
+    }
+
+    &__close {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        align-self: start;
+        justify-self: end;
+        z-index: 30;
+        font-size: 5rem;
+        color: v.$color-grey-pencil;
+        cursor: pointer;
+        border: none;
+        background: none;
+        display: flex;
+        position: absolute;
+        margin-top: 1.2rem;
+        margin-right: 2rem;
+
+        &:hover {
+            color: v.$color-grey-light;
         }
     }
 }

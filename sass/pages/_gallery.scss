@@ -39,7 +39,7 @@
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(11, 6vw);
+    // grid-template-rows: repeat(11, 6vw);
     column-gap: 1vw;
     row-gap: 1vw;
 
