@@ -3,7 +3,7 @@
 .page-container {
     display: grid;
     grid-template-rows: [header-start] 10rem [header-end main-start] 1fr [main-end footer-start] auto [footer-end];
-    grid-template-columns: [page-start] minmax(6rem, 1fr) [center-start]  minmax(min-content, 120rem) [center-end] minmax(6rem, 1fr) [page-end];
+    grid-template-columns: [page-start] minmax(6rem, 1fr) [center-start]  minmax(min-content, 100rem) [center-end] minmax(6rem, 1fr) [page-end];
     row-gap: 5vw;
     padding: 2rem 0;
 
