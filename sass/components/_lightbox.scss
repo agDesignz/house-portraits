@@ -9,7 +9,7 @@
     height: 100%;
     background-color: rgba(v.$color-grey-dark, .95);
     display: grid;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
 
     overflow-y: auto;
@@ -18,13 +18,13 @@
         display: grid;
         justify-content: center;
         align-items: center;
-
-        // @include m.respond(tab-port) {
-        //     max-width: 90%;
-        //   }
+        position: relative;
+        max-width: 82rem;
+        @include m.respond(tab-port) {
+            max-width: 90%;
+          }
 
         &.out {
-            // animation: imageDown .2s ease-in-out;
                         transition: all .35s;
             transform: translateY(20%) scale(0%);
         }
@@ -38,11 +38,8 @@
     &__img {
             grid-column: 1 / 2;
             grid-row: 1 / 2;
-            max-width: 82rem;
-            @include m.respond(tab-port) {
-                max-width: 90%;
-              }
             animation: imageUp .3s ease-in-out;
+            width: 100%;
     }
 
     &__close {

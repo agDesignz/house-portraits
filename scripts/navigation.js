@@ -5,14 +5,14 @@
 
   const body = document.querySelector("body");
   const checkBox = document.querySelector("#nav-toggle");
+  let topPosition;
   const checkIt = function() {
     if (this.checked) {
+      topPosition = window.scrollY;
       body.classList.add("modal-open");
-      body.style.top = `-${window.scrollY}px`;
     } else {
       body.classList.remove("modal-open");
-      body.style.top = '';
-      window.scrollTo(0, parseInt(scrollY || '0') * -1);
+      window.scrollTo(0, topPosition);
     }
   }
   checkBox.addEventListener("change", checkIt);
@@ -21,6 +21,5 @@
     const navToggle = document.querySelector('.navigation__checkbox');
     navToggle.checked = false;
   }
-
 
 }());
