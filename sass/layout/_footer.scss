@@ -1,27 +1,28 @@
-@use "../abstracts/variables" as v;
-@use "../abstracts/mixins" as m;
+@use "../abstracts/variables"as v;
+@use "../abstracts/mixins"as m;
 
 .footer {
-  padding: 3.5rem 0;
+  padding: 5vw 0;
   border-top: 1px solid v.$color-grey-light;
   grid-column: center-start / center-end;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  text-align: center;
+  row-gap: 3.5rem;
 
-  @include m.respond(phone) {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    text-align: center;
-    row-gap: 3.5rem;
+  @include m.respond(tab-port) {
+    border-top: 0;
   }
 
   &__cta {
-    & > * {
+    &>* {
       font-size: 1.6rem;
     }
   }
 
   &__email {
+
     &:link,
     &:visited {
       display: inline-block;
@@ -39,11 +40,8 @@
 
 
   &__stamp {
-    justify-self: end;
+    justify-self: center;
 
-    @include m.respond(phone) {
-      justify-self: center;
-    }
   }
 
   &__logo {

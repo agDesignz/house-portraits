@@ -14,7 +14,7 @@
 }
 
   &__item {
-    box-shadow: 0 2.5rem 4rem rgba(v.$color-black, .5);
+    box-shadow: 0 2.5rem 4rem rgba(v.$color-grey-pencil, .5);
 
     @include m.respond(tab-port) {
       box-shadow: none;

@@ -35,7 +35,7 @@
       font-weight: 300;
       text-transform: uppercase;
       letter-spacing: 0.2rem;
-      color: v.$color-white-paper;
+      color: v.$color-blue-3;
       text-decoration: none;
       transition: all 0.2s;
       position: relative;
@@ -52,7 +52,7 @@
       position: absolute;
       width: 100%;
       height: 1px;
-      background: v.$color-white-paper;
+      background: v.$color-blue-3;
       transition: transform 0.2s;
       transform: scale(0);
     }

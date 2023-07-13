@@ -2,9 +2,9 @@
 
 .photo-background {
   min-height: 100vh;
-  background-image: linear-gradient(to top, rgba(v.$color-grey-dark, 0.95), rgba(v.$color-grey-dark, 0.95)), url("../img/bg-art.jpg");
+  background-image: linear-gradient(to top, rgba(v.$color-jade-2, 0.9), rgba(v.$color-jade-1, 0.9)), url("../img/bg-art.jpg");
   background-size: cover;
   background-position: center right;
   background-attachment: fixed;
-  color: v.$font-color-primary-white;
+  color: v.$color-red-2;
 }

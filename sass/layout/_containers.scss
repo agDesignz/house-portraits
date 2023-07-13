@@ -1,13 +1,21 @@
 @use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
 
 .page-container {
     display: grid;
     grid-template-rows: [header-start] 10rem [header-end main-start] 1fr [main-end footer-start] auto [footer-end];
-    grid-template-columns: [page-start] minmax(6rem, 1fr) [center-start]  minmax(min-content, 100rem) [center-end] minmax(6rem, 1fr) [page-end];
+    grid-template-columns: [page-start] minmax(v.$gutter-pg-lg, 1fr) [center-start]  minmax(min-content, 100rem) [center-end] minmax(v.$gutter-pg-lg, 1fr) [page-end];
     row-gap: 5vw;
     padding: 2rem 0;
-
     min-height: 100%;
+
+    @include m.respond(tab-port) {
+        grid-template-columns: [page-start] minmax(v.$gutter-pg-md, 1fr) [center-start]  minmax(min-content, 100rem) [center-end] minmax(v.$gutter-pg-md, 1fr) [page-end];
+    }
+
+    @include m.respond(phone) {
+        grid-template-columns: [page-start] minmax(v.$gutter-pg-sm, 1fr) [center-start]  minmax(min-content, 100rem) [center-end] minmax(v.$gutter-pg-sm, 1fr) [page-end];
+    }
 }
 
 .main-container {

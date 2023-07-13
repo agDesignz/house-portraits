@@ -57,9 +57,13 @@
 .home-content {
 
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  // grid-template-columns: 3fr 1fr;
   grid-template-rows: min-content min-content;
   grid-row-gap: 4vw;
+
+  background-image: linear-gradient(rgba(v.$color-cream-1, .95), rgba(v.$color-cream-2, .95));
+  border-radius: 1rem;
+  padding: 2rem;
 
   @include m.respond(tab-port) {
     grid-template-columns: 1fr;
@@ -70,6 +74,7 @@
     grid-column: 1 / -1;
     font-weight: 400;
     line-height: 1;
+    text-align: center;
 
     // @include m.respond(tab-port) {
     //   text-align: center;
@@ -87,8 +92,7 @@
   }
 
   &__button-area {
-    grid-column: 1 / -1;
-    // align-self: end;
+    text-align: center;
   }
 
 }
