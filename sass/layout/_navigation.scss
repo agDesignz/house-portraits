@@ -6,36 +6,22 @@
   &__list {
     list-style: none;
     display: flex;
-    justify-content: space-between;
-
-    @include m.respond(tab-port) {
-      display: none;
-    }
-
-    &--modal {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
-  &__item {
-    padding: 1rem 0;
+    gap: 2.5rem;
   }
 
   &__link {
 
+    &,
     &:link,
     &:visited {
       z-index: 45;
       display: inline-block;
-      font-family: v.$font-quaternary;
-      font-size: 3rem;
+      font-family: v.$font-secondary;
+      font-size: 2.5rem;
       font-weight: 300;
       text-transform: uppercase;
       letter-spacing: 0.2rem;
-      color: v.$color-blue-3;
+      color: v.$font-color-nav;
       text-decoration: none;
       transition: all 0.2s;
       position: relative;
@@ -43,7 +29,7 @@
 
     &:active,
     &:hover {
-      transform: scale(110%) translateY(-2px);
+      transform: scale(105%) translateY(-1px);
     }
 
     &::after {
@@ -52,7 +38,7 @@
       position: absolute;
       width: 100%;
       height: 1px;
-      background: v.$color-blue-3;
+      background: v.$font-color-nav;
       transition: transform 0.2s;
       transform: scale(0);
     }
@@ -61,30 +47,10 @@
     &:hover::after {
       transform: scale(1);
     }
-
-    &--modal {
-
-      &:link,
-      &:visited {
-        color: v.$color-grey-pencil;
-      }
-
-      &::after {
-        background: v.$color-grey-pencil;
-      }
-    }
   }
 
-  ////////////////////////////////////////////////////
+  // ICON //
 
-  &--corner {
-    display: none;
-    height: 0;
-
-    @include m.respond(tab-port) {
-      display: block;
-    }
-  }
 
   &__checkbox {
     display: none;
@@ -93,34 +59,22 @@
   &__button {
     perspective: 150rem;
     -moz-perspective: 150rem;
+    // width: 25rem;
+    // height: 25rem;
+    border-radius: 50%;
+    background-image: v.$bg-cream;
+    box-shadow: v.$shadow-grey-small;
     z-index: 50;
-    background-color: rgba(v.$color-grey-paper, .95);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 1rem;
-    box-shadow: 0 2px 2rem rgba(v.$color-grey-pencil, .7);
+    width: 4.5rem;
+    height: 4.5rem;
     cursor: pointer;
     transition: all 0.2s;
-
-    &--corner {
-      position: fixed;
-
-      @include m.respond(tab-port) {
-        top: 5rem;
-        right: 5rem;
-      }
-
-      @include m.respond(phone) {
-        position: absolute;
-      }
-    }
-
-    &--header {
-      position: relative;
-    }
+    position: fixed;
+    top: 4rem;
+    right: 4rem;
   }
 
   &__icon {
@@ -129,9 +83,10 @@
     &,
     &::after,
     &::before {
-      width: 3rem;
-      height: 2px;
-      background-color: v.$color-grey-dark;
+      width: 3.5rem;
+      height: 3px;
+      border-radius: 2px;
+      background-image: linear-gradient(to right, v.$color-red-2, v.$color-red-1);
       transition: transform 0.2s;
     }
 
@@ -143,70 +98,27 @@
     }
 
     &::before {
-      top: -.8rem;
+      top: -1rem;
     }
 
     &::after {
-      top: 0.8rem;
+      top: 1rem;
     }
   }
 
   &__button:hover {
-    box-shadow: 0 2rem 6rem rgba(v.$color-black, .6);
+    // opacity: .6;
   }
 
-  &__button:hover &__icon,
-  &__button:hover &__icon::after,
-  &__button:hover &__icon::before {
-    // background-color: v.$color-grey-light;
-  }
 
-  &__button:hover &__icon::before {
-    top: -1rem;
-  }
-
-  &__button:hover &__icon::after {
-    top: 1rem;
-  }
-
-  &__background {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 40;
-    height: 100vh;
-    overflow-y: hidden;
-    width: 0;
-    transition: all 0.3s;
-    @include m.paperPage;
-  }
-
-  &__nav {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.2s 0.3s;
-  }
-
-  &__image {
-    max-width: 30rem;
-    margin-bottom: 2rem;
-  }
+  // CHECKBOX:CHECKED //
 
   &__checkbox:checked+&__button {
     transform: rotateY(180deg);
-
-    @include m.respond(phone) {
-      position: fixed;
-    }
   }
 
   &__checkbox:checked+&__button &__icon {
-    background-color: transparent;
+    height: 0;
   }
 
   &__checkbox:checked+&__button &__icon::before {
@@ -219,21 +131,47 @@
     transform: rotate(-45deg);
   }
 
-  &__checkbox:checked~&__background {
-    width: 100%;
+  &__checkbox:checked~&__list {
+    transform: scaleY(1);
   }
 
-  &__checkbox:checked~&__background &__nav {
-    min-height: 100vh;
-    display: flex;
-  }
-}
 
-body.modal-open {
-  height: 100vh;
-  overflow-y: hidden;
+  //  MOBILE MENU  //
+  
+  @include m.respond(phone) {
 
-  @include m.respond(tab-port) {
+    &__list {
+    transform: scaleY(0);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
     position: fixed;
+    z-index: 40;
+    background-image: v.$bg-cream;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    transform-origin: top;
+    }
+
+    &__link {
+      &,
+      &:link,
+      &:visited {
+        font-size: 3rem;
+        color: v.$color-blue-3;
+      }
+
+      &::after {
+        background: v.$color-blue-3;
+      }
+    }
+
+    &__button {
+      display: flex;
+    }
   }
+
 }

@@ -14,7 +14,7 @@
       @media (max-width: 75em) { @content }; // 1200px
     }
     @if $breakpoint == tab-port {
-      @media (max-width: 56.25em) { @content }; // 900px
+      @media (max-width: 50em) { @content }; // 800px
     }
     @if $breakpoint == phone {
       @media (max-width: 37.5em) { @content }; // 600px
@@ -26,4 +26,20 @@
 
 @mixin paperPage {
   background-image: linear-gradient(to bottom left, v.$color-white-paper, v.$color-grey-paper);
+}
+
+@mixin bg-jade {
+  background-image: linear-gradient( v.$color-jade-1, v.$color-jade-3);
+}
+
+@mixin bg-blue {
+  background-image: linear-gradient( v.$color-blue-1, v.$color-blue-3);
+}
+
+@mixin bg-red {
+  background-image: linear-gradient( v.$color-red-1, v.$color-red-3);
+}
+
+@mixin bg-cream {
+  background-image: linear-gradient( v.$color-cream-1, v.$color-cream-2);
 }

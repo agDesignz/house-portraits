@@ -7,7 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <!-- FONTS -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;300&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Sorts+Mill+Goudy:ital@0;1&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;300&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Sorts+Mill+Goudy:ital@0;1&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+    rel="stylesheet">
 
   <!-- STYLESHEETS -->
   <link rel="stylesheet" href="css/style.css">
@@ -20,88 +22,77 @@
 
 <body class="body photo-background">
 
-  <div class="page-container">
+  <div class="container--page-vertical container--wrapper">
 
-    <header class="header">
-      <img src="img/logo-black-300.png" alt="" class="header__logo">
-      <ul class="navigation__list">
+
+    <header class="header container--wrapper">
+      <div class="header__wrapper container--center">
+        <figure class="header__logo">
+          <img src="img/logo-white-300.png" alt="" class="header__logo-img">
+        </figure>
+
+        <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
+        <label for="nav-toggle" class="navigation__button">
+          <span class="navigation__icon">&nbsp;</span>
+        </label>
+        <ul class="navigation__list">
           <li class="navigation__item"><a href="index.html" class="navigation__link">Home</a></li>
           <li class="navigation__item"><a href="about.html" class="navigation__link">About</a></li>
           <li class="navigation__item"><a href="gallery.html" class="navigation__link">Gallery</a></li>
           <li class="navigation__item"><a href="contact.html" class="navigation__link">Commission</a></li>
         </ul>
+      </div>
+    </header>
 
-        <div class="navigation navigation--corner">
-          <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
-          <label for="nav-toggle" class="navigation__button navigation__button--corner">
-            <span class="navigation__icon">&nbsp;</span>
-          </label>
-          <div class="navigation__background">
-            <nav class="navigation__nav">
-              <img src="img/girard-bl-sm.png" alt="houses on girard avenue" class="navigation__image">
-              <ul class="navigation__list--modal">
-                <li class="navigation__item"><a href="index.html" class="navigation__link navigation__link--modal">Home</a></li>
-                <li class="navigation__item"><a href="about.html" class="navigation__link navigation__link--modal">About</a></li>
-                <li class="navigation__item"><a href="gallery.html" class="navigation__link navigation__link--modal">Gallery</a></li>
-                <li class="navigation__item"><a href="contact.html" class="navigation__link navigation__link--modal">Commission</a></li>
-              </ul>
-            </nav>
-          </div>
+    <section class="front-page container--center container--grid-12-col">
+
+      <div class="front-page__content front-page__box container__full-sm">
+        <div class="front-page__content-area">
+          <h1 class="heading-primary front-page__heading">
+            <span class="front-page__heading--main">Alex Geer Art</span><br>
+            <span class="front-page__heading--sub">Custom house portraits in pen and ink.</span>
+          </h1>
         </div>
-  </header>
-  
-  <section class="main-container">
 
-    <div class="home-container">
-      <div class="home-content">
-        <!-- <img src="img/girard-wh-sm.png" alt="Logo" class="home-content__img"> -->
-        <h1 class="heading-primary home-content__heading">
-          <span class="home-content__heading--main">Alex Geer Art.</span>
-          <span class="home-content__heading--sub">Custom house portraits<br>in pen and ink.</span>
-          <!-- <span class="home-content__heading--sub">in pen and ink.</span> -->
-        </h1>
-        <p class="home-content__text">
-          Your home is the place where you live, where your family grows, and where you make memories. It's a part of the family. My artwork aims to capture that ambience and provide you with a warm, personal portrait of your home that you can
-          cherish throughout the years.
+        <div class="front-page__content-area">
+          <p class="front-page__text">
+            Your home is the place where you live, where your family grows, and where you make memories. It's a part of
+            the family. My artwork aims to capture that ambience and provide you with a warm, personal portrait of your
+            home that you can
+            cherish throughout the years.
+          </p>
+        </div>
+      </div>
+
+
+
+      <figure class="front-page__item front-page__item--1 front-page__box container__full-sm">
+        <img src="img/print-dimitra.jpg" alt="House portrait 1" class="front-page__img">
+      </figure>
+      <figure class="front-page__item front-page__item--2 front-page__box container__full-sm">
+        <img src="img/print-martel.jpg" alt="House portrait 2" class="front-page__img">
+      </figure>
+      <figure class="front-page__item front-page__item--3 front-page__box container__full-sm">
+        <img src="img/print-mys.jpg" alt="House portrait 3" class="front-page__img">
+      </figure>
+
+    </section>
+
+    <footer class="footer">
+      <div class="footer__cta">
+        <p>For information, or to commission a house portrait:</p>
+        <a href="mailto:alex@alexgeerart.com" class="footer__email">alex@alexgeerart.com</a>
+      </div>
+      <div class="footer__stamp">
+        <img src="img/logo-white-300.png" alt="Logo in white" class="footer__logo">
+        <p class="footer__copyright">
+          © Alex Geer Art, 2022.
         </p>
-  
-      <div class="home-content__button-area">
-        <a href="contact.html" class="btn-text home-content__btn">Commission a portrait</a>
       </div>
-      </div>
-    
-      <div class="home-minigal minigal">
-    
-        <!-- USE srcset HERE for more photo options -->
-        <figure class="minigal__item minigal__item--1">
-          <img src="img/print-dimitra.jpg" alt="House portrait 1" class="minigal__img">
-        </figure>
-        <figure class="minigal__item minigal__item--2">
-          <img src="img/print-martel.jpg" alt="House portrait 2" class="minigal__img">
-        </figure>
-        <figure class="minigal__item minigal__item--3">
-          <img src="img/print-mys.jpg" alt="House portrait 3" class="minigal__img">
-        </figure>
-      </div>
-    </div>
-
-  </section>
-
-  <footer class="footer">
-    <div class="footer__cta">
-      <p>For information, or to commission a house portrait:</p>
-      <a href="mailto:alex@alexgeerart.com" class="footer__email">alex@alexgeerart.com</a>
-    </div>
-    <div class="footer__stamp">
-      <img src="img/logo-white-300.png" alt="Logo in white" class="footer__logo">
-      <p class="footer__copyright">
-        © Alex Geer Art, 2022.
-      </p>
-    </div>
-  </footer>
+    </footer>
 
 
-</div>
+  </div>
 
 </body>
 

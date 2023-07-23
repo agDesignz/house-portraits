@@ -14,7 +14,7 @@
 }
 
   &__item {
-    box-shadow: 0 2.5rem 4rem rgba(v.$color-grey-pencil, .5);
+    box-shadow: v.$shadow-red-small;
 
     @include m.respond(tab-port) {
       box-shadow: none;
@@ -53,7 +53,7 @@
 
     &:hover {
       transform: scale(1.05) translateY(-.5rem);
-      box-shadow: 0 2.5rem 4rem rgba(v.$color-black, .5);
+      box-shadow: 0 .5rem 1rem rgba(v.$color-red-3, .4);
       z-index: 50;
 
       @include m.respond(tab-port) {

@@ -5,16 +5,19 @@ body {
   font-weight: 300;
   line-height: 1.7;
   box-sizing: border-box;
+  color: v.$font-color-primary;
 }
 
 .heading-primary {
-  font-family: v.$font-primary;
+  font-family: v.$font-secondary;
   font-size: v.$primary-heading-font-size;
+  font-weight: 400;
 }
 
 .heading-secondary {
   font-size: 3rem;
-  font-family: v.$font-tertiary;
+  font-family: v.$font-primary;
+  // color: v.$font-color-heading;
 }
 
 p {

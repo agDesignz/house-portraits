@@ -30,9 +30,14 @@ $color-blue-1: #5580d5;
 $color-blue-2: #2b55aa;
 $color-blue-3: #002b80;
 
+$color-exp-1: #a25917;
+$color-exp-2: #da8e31;
+
 // FONTS
 
-$font-color-primary-white: $color-white-paper;
+$font-color-primary: $color-grey-dark;
+$font-color-heading: $color-blue-3;
+$font-color-nav: $color-white-paper;
 $default-font-size: 2rem;
 $primary-heading-font-size: 5rem;
 
@@ -44,3 +49,13 @@ $font-primary: 'Montserrat Alternates', sans-serif;
 $font-secondary: 'Sorts Mill Goudy', serif;
 $font-tertiary: 'Playfair Display', serif;
 $font-quaternary: 'Source Sans Pro', sans-serif;
+
+$bg-jade: linear-gradient( $color-jade-1, $color-jade-2);
+$bg-blue: linear-gradient(to bottom left, $color-blue-2, $color-blue-3);
+$bg-red: linear-gradient( $color-red-1, $color-red-2);
+$bg-cream: linear-gradient( $color-cream-1, $color-cream-2);
+$bg-gold: linear-gradient( $color-gold-1, $color-gold-2);
+
+$shadow-red-small: 0 .5rem 1rem rgba($color-red-3, .2);
+$shadow-grey-small: 0 .5rem 1rem rgba($color-grey-dark, .5);
+$shadow-blue-small: 0 .5rem 1rem rgba($color-blue-3, .4);

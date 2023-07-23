@@ -1,0 +1,16 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+.body {
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(v.$color-jade-1, .92), rgba(v.$color-jade-2, .92)), url(../../img/print-murph.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  overflow-x: hidden;
+
+      @include m.respond(phone) {
+        background-image: linear-gradient(rgba(v.$color-jade-1, .92), rgba(v.$color-jade-2, .92));
+    }
+}

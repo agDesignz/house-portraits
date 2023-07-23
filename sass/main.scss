@@ -13,12 +13,12 @@
 @use "components/minigal";
 
 @use "layout/containers";
+@use "layout/body";
 @use "layout/footer";
 @use "layout/header";
 @use "layout/navigation";
-@use "layout/photo-bg";
 
 @use "pages/about";
 @use "pages/contact";
 @use "pages/gallery";
-@use "pages/home";
+@use "pages/front-page";

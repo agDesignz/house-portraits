@@ -1,6 +1,6 @@
 class NavStopScroll {
   constructor () {
-    this.menuIcon = document.querySelector('#nav-toggle');
+    this.menuIcon = document.querySelector('.navigation__checkbox');
     this.body = document.querySelector('.body');
     this.navList = document.querySelector('.navigation__list--modal');
     this.window = window;
@@ -27,7 +27,7 @@ class NavStopScroll {
   resetModal(e) {
     if (e.target.classList.contains('navigation__link--modal')) this.menuIcon.checked = false;
   }
-  
+
 }
 
 export default NavStopScroll;

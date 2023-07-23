@@ -2,13 +2,35 @@
 @use "../abstracts/mixins" as m;
 
 .header {
-  grid-column: center-start / center-end;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  align-items: center;
+  grid-column: 1 / -1;
+  background-image: linear-gradient(rgba(v.$color-red-1, .88), rgba(v.$color-red-2, .88)), url(../../img/print-jen.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-shadow: v.$shadow-grey-small;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 14rem;
+    padding: 2rem 0;
+
+    @include m.respond(tab-port) {
+      gap: 8rem;
+    }
+
+    @include m.respond(phone) {
+      // align-items: center;
+      padding: 3rem;
+    }
+  }
 
   &__logo {
-    max-height: 8rem;
-    border-radius: 5px;
+    width: 20rem;
+
+    @include m.respond(phone) {
+      // width: 12rem;
+    }
   }
+
 }
