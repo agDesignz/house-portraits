@@ -315,7 +315,7 @@ figcaption {
 
 .body {
   min-height: 100vh;
-  background-image: linear-gradient(rgba(198, 227, 170, 0.92), rgba(170, 198, 142, 0.92)), url(../../img/print-letitbe.jpg);
+  background-image: linear-gradient(rgba(198, 227, 170, 0.92), rgba(170, 198, 142, 0.92)), url(../img/print-letitbe.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -371,7 +371,7 @@ figcaption {
 
 .header {
   grid-column: 1/-1;
-  background-image: linear-gradient(rgba(102, 42, 37, 0.88), rgba(85, 28, 28, 0.88)), url(../../img/print-jen.jpg);
+  background-image: linear-gradient(rgba(102, 42, 37, 0.88), rgba(85, 28, 28, 0.88)), url(../img/print-jen.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
