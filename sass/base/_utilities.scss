@@ -1,8 +1,15 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
 
-.u-container {
-  max-width: 120rem;
-  margin: 0 auto;
-  height: inherit;
+.u--sm-p-3 {
+  @include m.respond(phone) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.u--flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

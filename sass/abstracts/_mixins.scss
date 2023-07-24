@@ -14,8 +14,11 @@
       @media (max-width: 75em) { @content }; // 1200px
     }
     @if $breakpoint == tab-port {
-      @media (max-width: 50em) { @content }; // 800px
+      @media (max-width: 56.25em) { @content }; // 900px
     }
+    // @if $breakpoint == tab-port {
+    //   @media (max-width: 50em) { @content }; // 800px
+    // }
     @if $breakpoint == phone {
       @media (max-width: 37.5em) { @content }; // 600px
     }

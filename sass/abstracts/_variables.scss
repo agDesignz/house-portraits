@@ -38,8 +38,9 @@ $color-exp-2: #da8e31;
 $font-color-primary: $color-grey-dark;
 $font-color-heading: $color-blue-3;
 $font-color-nav: $color-white-paper;
-$default-font-size: 2rem;
-$primary-heading-font-size: 5rem;
+$default-font-size: 2.4rem;
+$default-font-size-sm: 2rem;
+$primary-heading-font-size: 3.8rem;
 
 $gutter-pg-lg: 6rem;
 $gutter-pg-md: 3rem;
@@ -57,5 +58,6 @@ $bg-cream: linear-gradient( $color-cream-1, $color-cream-2);
 $bg-gold: linear-gradient( $color-gold-1, $color-gold-2);
 
 $shadow-red-small: 0 .5rem 1rem rgba($color-red-3, .2);
+$shadow-red-large: 0 1rem 2rem rgba($color-red-3, .2);
 $shadow-grey-small: 0 .5rem 1rem rgba($color-grey-dark, .5);
 $shadow-blue-small: 0 .5rem 1rem rgba($color-blue-3, .4);

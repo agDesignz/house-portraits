@@ -2,23 +2,29 @@
 @use "../abstracts/mixins"as m;
 
 .footer {
-  padding: 5vw 0;
-  border-top: 1px solid v.$color-grey-light;
-  grid-column: center-start / center-end;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  text-align: center;
-  row-gap: 3.5rem;
+  grid-column: page-start / page-end;
+  background-image: v.$bg-blue;
+  padding: 3.5rem 0;
+  color: v.$color-white-paper;
 
-  @include m.respond(tab-port) {
-    border-top: 0;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    @include m.respond(tab-port) {
+      align-items: center;
+    }
   }
 
   &__cta {
     &>* {
       font-size: 1.6rem;
     }
+      @include m.respond(tab-port) {
+        text-align: center;
+      }
+
   }
 
   &__email {
@@ -26,10 +32,11 @@
     &:link,
     &:visited {
       display: inline-block;
-      // color: v.$font-color-primary-white;
-      font-weight: 700;
+      color: v.$color-white;
+      font-family: v.$font-primary;
+      font-weight: 200;
       text-decoration: none;
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
 
     &:active,
@@ -39,14 +46,6 @@
   }
 
 
-  &__stamp {
-    justify-self: center;
-
-  }
-
-  &__logo {
-    height: 8rem;
-  }
 
   &__copyright {
     font-size: 1.4rem;

@@ -4,76 +4,25 @@
 
 .front-page {
   row-gap: v.$gutter-pg-md;
+  grid-template-rows: repeat(4, auto);
 
   &__content {
-    padding: v.$gutter-pg-lg v.$gutter-pg-md;
-    // background: v.$bg-blue;
-    background-image: linear-gradient(rgba(v.$color-blue-2, .75), rgba(v.$color-blue-3, .7));
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    color: v.$color-cream-1;
-    grid-column: span 12;
     display: flex;
-    gap: v.$gutter-pg-md;    
-    box-shadow: v.$shadow-red-small;
+    align-items: center;
+    padding-right: 2rem;
 
     @include m.respond(tab-port) {
-      flex-direction: column;
-      align-items: center;
-    }
-
-  }
-
-  &__content-area {
-    flex: 1;
-  }
-
-  &__heading {
-    line-height: 1;
-
-    @include m.respond(tab-port) {
-      text-align: center;
-    }
-
-    &--main {}
-
-    &--sub {
-      // font-family: ;
-      font-size: 2.4rem;
-      font-weight: 200;
-    }
-  }
-
-  &__text {
-
-    @include m.respond(tab-port) {
-      padding: 0 5%;
+      grid-column: 3 / span 8;
     }
 
     @include m.respond(phone) {
-      padding: 0;
+      grid-column: 1 / -1;
     }
   }
 
   &__item {
-    grid-column: span 4;
     box-shadow: v.$shadow-red-small;
     overflow: hidden;
-
-    @include m.respond(tab-port) {
-      grid-column: span 6;
-    }
-
-    &--3 {
-      @include m.respond(tab-port) {
-        grid-column: span 12;
-      }
-    }
-
-    @include m.respond(phone) {
-      grid-column: 2 / -2;
-    }
   }
 
   &__img {
@@ -86,8 +35,22 @@
   &__box {
     border-radius: 3px;
 
+    @include m.respond(tab-port) {
+      grid-column: 3 / span 8;
+    }
+
     @include m.respond(phone) {
       border-radius: 0;
+      margin: 0 2rem;
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__contact {
+    padding: 2rem 0;
+    
+    @include m.respond(tab-port) {
+      grid-row: 2 / span 1;
     }
   }
 

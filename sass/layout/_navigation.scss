@@ -59,22 +59,20 @@
   &__button {
     perspective: 150rem;
     -moz-perspective: 150rem;
-    // width: 25rem;
-    // height: 25rem;
-    border-radius: 50%;
-    background-image: v.$bg-cream;
+    border-radius: 3px;
+    background-color: v.$color-white;
     box-shadow: v.$shadow-grey-small;
     z-index: 50;
     display: none;
     justify-content: center;
     align-items: center;
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 4rem;
+    height: 4rem;
     cursor: pointer;
     transition: all 0.2s;
     position: fixed;
-    top: 4rem;
-    right: 4rem;
+    top: 3rem;
+    right: 3rem;
   }
 
   &__icon {

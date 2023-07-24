@@ -1,25 +1,28 @@
 @use "../abstracts/variables" as v;
 
-.btn-text {
+.btn {
   &:link,
   &:visited {
-    font-size: 2.2rem;
-    color: v.$color-white;
+    font-size: 3rem;
     display: inline-block;
+    font-family: v.$font-primary;
+    font-weight: 400;
     text-decoration: none;
-    // border-bottom: 1px solid v.$color-white;
-    border: 1px solid v.$color-white;
-    padding: 3px 2rem;
-    border-radius: 4px;
-    transition: all 0.2s;
-    // justify-self: start;
-    // align-self: end;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    border-radius: .8rem;
+    transition: all 0.3s;
+    box-shadow: v.$shadow-red-small;
+  }
+
+  &--cream {
+    background-image: v.$bg-cream;
+    color: v.$color-blue-2;
   }
 
   &:hover {
-    background-color: rgba(v.$color-white-paper, .2);
-    // color: v.$color-grey-dark;
     transform: translateY(-2px);
+    box-shadow: v.$shadow-red-large;
   }
 
   &:active {

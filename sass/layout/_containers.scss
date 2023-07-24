@@ -5,8 +5,12 @@
     &--page-vertical {
         display: grid;
         grid-template-rows: [header-start] auto [header-end main-start] 1fr [main-end footer-start] auto [footer-end];
-        row-gap: 5vw;
+        row-gap: 8rem;
         min-height: 100%;
+
+        @include m.respond(tab-port) {
+            row-gap: 5rem;
+          }
     }
 
     &--wrapper {
@@ -38,27 +42,36 @@
         grid-column-gap: 1rem;
     }
 
-}
-
-.col {
-
-    &--12 {
-        grid-column: span 12;
+    &--full {
+        grid-column: 1 / -1;
     }
 
-    &--6 {
+    &--col-6 {
         grid-column: span 6;
     }
 
-    &--4 {
+
+    &--col-4 {
         grid-column: span 4;
     }
 
-    &--3 {
+    &--col-3 {
         grid-column: span 3;
     }
-}
 
+    &--sm-full {
+        @include m.respond(phone) {
+            grid-column: 1 / -1;
+          }
+    }
+
+    &--md-full {
+        @include m.respond(tab-port) {
+            grid-column: 1 / -1;
+          }
+    }
+
+}
 
 
 // .main-container {
