@@ -3,18 +3,15 @@
 
 .footer {
   grid-column: page-start / page-end;
-  background-image: v.$bg-blue;
+  background-image: v.$bg-red;
   padding: 3.5rem 0;
   color: v.$color-white-paper;
-
+  
   &__wrapper {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
-
-    @include m.respond(tab-port) {
-      align-items: center;
-    }
+    text-align: center;
   }
 
   &__cta {

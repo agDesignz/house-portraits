@@ -22,53 +22,46 @@
   <title>Alex Geer House Portraits | Custom portraits of your house, hand-drawn in pen and ink.</title>
 </head>
 
-<body class="body photo-background">
+<body class="body">
 
-  <div class="page-container">
+  <div class="container--page-vertical container--wrapper">
 
-    <header class="header">
-      <img src="img/logo-tile-sq.png" alt="" class="header__logo">
-      <ul class="navigation__list">
+    <header class="header container--wrapper">
+      <div class="header__wrapper container--center">
+        <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
+        <label for="nav-toggle" class="navigation__button">
+          <span class="navigation__icon">&nbsp;</span>
+        </label>
+        <ul class="navigation__list">
           <li class="navigation__item"><a href="index.html" class="navigation__link">Home</a></li>
           <li class="navigation__item"><a href="about.html" class="navigation__link">About</a></li>
           <li class="navigation__item"><a href="gallery.html" class="navigation__link">Gallery</a></li>
           <li class="navigation__item"><a href="contact.html" class="navigation__link">Commission</a></li>
         </ul>
-
-        <div class="navigation navigation--corner">
-          <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
-          <label for="nav-toggle" class="navigation__button navigation__button--corner">
-            <span class="navigation__icon">&nbsp;</span>
-          </label>
-          <div class="navigation__background">
-            <nav class="navigation__nav">
-              <img src="img/girard-bl-sm.png" alt="houses on girard avenue" class="navigation__image">
-              <ul class="navigation__list--modal">
-                <li class="navigation__item"><a href="index.html" class="navigation__link navigation__link--modal">Home</a></li>
-                <li class="navigation__item"><a href="about.html" class="navigation__link navigation__link--modal">About</a></li>
-                <li class="navigation__item"><a href="gallery.html" class="navigation__link navigation__link--modal">Gallery</a></li>
-                <li class="navigation__item"><a href="contact.html" class="navigation__link navigation__link--modal">Commission</a></li>
-              </ul>
-            </nav>
-          </div>
+        <div class="header__title">
+          <figure class="header__logo">
+            <img src="img/logo-white-roof-600.png" alt="" class="header__logo-img">
+          </figure>
+          <h1 class="header__heading">Alex Geer Art</h1>
+          <h2 class="header__sub-heading">Custom house portraits in pen and ink.</h2>
         </div>
-  </header>
+      </div>
+    </header>
 
-  <section class="main-container">
-    <div class="gallery__content">
+  <section class="front-page container--center container--grid-12-col">
 
-    <div class="gallery__note">
+    <div class="gallery__note container--col-6 container--md-full">
       <p class="gallery__note--body">
         I have a dear friend, Michael, for whom I wanted to get a special gift so I immediately thought of Alex Geer and his beautiful house portraits. Alex's pen and ink drawing of the home was beautifully rendered, but just as importantly, it was warm and personal.
       </p>
 
       <section class="full-container">
-    
-        
+
+
       </section>
       <p class="gallery__note--signature">--Diane, Massachusetts</p>
     </div>
-    <div class="gallery__info">
+    <div class="gallery__info container--col-6 container--md-full">
       <p>
         Each portrait is drawn on archival quality paper, with archival ink. Both paper and ink are acid-free. They also look great on stationary, coffee mugs, mouse pads or even a face masks.
       </p>
@@ -138,8 +131,6 @@
 
     </div>
 
-          
-  </div>
   </section>
 
   <footer class="footer">
@@ -154,7 +145,7 @@
       </p>
     </div>
   </footer>
-  
+
 </div>
 
 <div class="lightbox lightbox--hidden">
